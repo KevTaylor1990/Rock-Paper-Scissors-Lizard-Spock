@@ -1,5 +1,5 @@
 var computerChoiceDisplay = document.getElementById("computer-choice");
-var yourChoiceDisplay = document.getElementById("your-choice");
+//var yourChoiceDisplay = document.getElementById("your-choice");
 var resultsDisplay = document.getElementById("results");
 var choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
@@ -9,22 +9,23 @@ var results;
 
 
 
-window.onload = function() {
-    for(let i = 0; i < 5; i++) {
-        let choice = document.getElementById('buttons');
-        choice.id = choices[i];
-        choice.addEventListener('click', selectChoice);
-    }
-}
+//window.onload = function() {
+    //for(let i = 0; i < 5; i++) {
+        //let choice = document.getElementById('buttons');
+       // choice.id = choices[i];
+       // choice.addEventListener('click', selectChoice);
+    //}
+//}
 
-function selectChoice() {
-    yourChoice = this.id;
-    document.getElementById('buttons')
-    console.log('you clicked a button')
+function selectChoice(id) {
+    let choice = document.getElementById(id).innerHTML;
+    console.log('you clicked a button'+ choice);
 }
 
 function generateComputerChoice() {
-    var randomNumber = Math.floor(Math.random() * 5) +1;
+    let randomNumber = choices[Math.floor(Math.random() * 5) +1];
+    document.getElementById('buttons');
+    console.log('computer selection');
 
     if (randomNumber === 1); {
         computersChoice = "Rock";
