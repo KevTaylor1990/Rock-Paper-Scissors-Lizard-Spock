@@ -19,7 +19,12 @@ var results;
 
 function selectChoice(id) {
     let choice = document.getElementById(id).innerHTML;
-    console.log('you clicked a button'+ choice);
+    console.log('you clicked a button' + choice);
+}
+
+function selectChoices(id) {
+    let choices = document.getElementById("buttons").innerHTML;
+    console.log('you clicked a button' + choices);
 }
 
 function generateComputerChoice() {
